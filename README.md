@@ -21,13 +21,21 @@
 
 ## How to Run the App
 
-backend
+### Backend
 
 ```python
 python manage.py runserver
 ```
 
-frontend
+### Frontend
+
+Please proceed with "npm i" first to install gitignored dependencies
+
+```javascript
+npm i
+```
+
+then
 
 ```javascript
 npm start
