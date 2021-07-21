@@ -32,7 +32,7 @@ def yelpdeep(request):
               'limit': limit, 'offset': offset}
     resp = requests.get(url, params=params, headers=headers)
     businesses = resp.json()
-    result_size = len(businesses.get('businesses'))
+    result_size = 0 if businesses.get('businesses') is None else len(businesses.get('businesses'))
     new_businesses = businesses.get('businesses')
 
     while result_size == limit:
