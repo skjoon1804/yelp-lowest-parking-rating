@@ -1,3 +1,2 @@
-release: python manage.py runserver
-web: gunicorn backend.wsgi --log-file -
-heroku ps:scale web=1
+release: python manage.py migrate
+web: python manage.py runserver
